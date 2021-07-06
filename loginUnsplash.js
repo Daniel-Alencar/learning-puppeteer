@@ -12,8 +12,8 @@ async function loginUnsplash() {
   await page.click('[href="/login"]');
 
   // Digita o email e a senha no campos corretos e loga
-  await page.type('[name="user[email]"]','danielalencar746@gmail.com');
-  await page.type('[name="user[password]"]','ChapeuSeletor!2210');
+  await page.type('[name="user[email]"]', process.env.UNSPLASH_EMAIL);
+  await page.type('[name="user[password]"]', process.env.UNSPLASH_PASSWORD);
   await page.click('[type="submit"]');
 
   await page.waitForNavigation();
