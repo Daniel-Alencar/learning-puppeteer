@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start --converter": "node currencyConverter.js",
-    "start --login": "node loginUnsplash.js"
+    "startConverter": "node src/robots/currencyConverter.js",
+    "startLogin": "node src/robots/loginUnsplash.js",
+    "test": "node test.js"
   },
   "dependencies": {
     "puppeteer": "^10.1.0",

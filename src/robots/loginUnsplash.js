@@ -1,12 +1,13 @@
 require('dotenv').config({  
   path: ".env"
 });
+
 const puppeteer = require('puppeteer');
 
 async function loginUnsplash() {
   const browser = await puppeteer.launch({
     executablePath: '/usr/bin/chromium',
-    headless: false,
+    headless: true,
   });
   const page = await browser.newPage();
   await page.goto('https://unsplash.com/');
