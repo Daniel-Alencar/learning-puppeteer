@@ -1,0 +1,13 @@
+{
+  "name": "robo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "puppeteer": "^10.1.0",
+    "readline-sync": "^1.4.10"
+  }
+}
