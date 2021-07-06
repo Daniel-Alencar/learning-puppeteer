@@ -1,9 +1,12 @@
+require('dotenv').config({  
+  path: ".env"
+});
 const puppeteer = require('puppeteer');
 
 async function loginUnsplash() {
   const browser = await puppeteer.launch({
     executablePath: '/usr/bin/chromium',
-    headless: true,
+    headless: false,
   });
   const page = await browser.newPage();
   await page.goto('https://unsplash.com/');
@@ -11,7 +14,7 @@ async function loginUnsplash() {
   // Clica no botão de login
   await page.click('[href="/login"]');
 
-  // Digita o email e a senha no campos corretos e loga
+  // Digita o email e a senha no campos corretos e faz login
   await page.type('[name="user[email]"]', process.env.UNSPLASH_EMAIL);
   await page.type('[name="user[password]"]', process.env.UNSPLASH_PASSWORD);
   await page.click('[type="submit"]');

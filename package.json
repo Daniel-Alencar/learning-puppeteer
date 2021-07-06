@@ -10,5 +10,8 @@
   "dependencies": {
     "puppeteer": "^10.1.0",
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
   }
 }
