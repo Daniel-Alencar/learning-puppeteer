@@ -26,16 +26,16 @@ async function loginUnsplash() {
   await page.goto('https://unsplash.com/photos/1owvL93fHrQ');
 
   // Dá um 'gostei' na foto se a foto não estiver com o gostei
+  const URL = '._3jtP1._3d86A._1CBrG._1WPby.xLon9.hhSId._1EJJ-._3hx1p';
   const notLiked = await page.evaluate(() => {
-    return document.querySelector('._3jtP1._3d86A._1CBrG._1WPby.xLon9.hhSId._1EJJ-._3hx1p') 
-            ? false
-            : true;
+    return document.querySelector(URL) 
+      ? false
+      : true;
   });
 
   if(notLiked) {
     await page.click('[title="Like photo"]');
   }
-  
   await browser.close();
 }
 
